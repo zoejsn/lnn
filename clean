@@ -1,4 +1,6 @@
 import pandas as pd
+from lnn import And, Loss, Implies, Or,  Equivalent, Fact, Predicates, Model, Variables, World
+
 data=pd.read_csv("Chemin d'accès/.../credit_risk_dataset.csv", sep=',')
 data
 data_1=data.copy()
@@ -19,7 +21,7 @@ def age_appli(x):
         
 data_1['VF_age']=data_1['person_age'].apply(age_appli)
 
-data_1["VF"].value_counts()
+data_1["VF_age"].value_counts()
 
 data_1["person_age"]=data_1["person_age"].astype(str)
 
